@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/* Configuração do Tailwind v4: Substitui o tailwind.config.js */
+@theme {
+  --color-green: #b9ff66;
+  --color-dark: #191a23;
+  --color-gray: #f3f3f3;
+  --font-grotesk: "Space Grotesk", sans-serif;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-lg bg-dark px-[35px] py-5 text-white transition-all duration-200 ease-in-out hover:scale-105 hover:bg-green hover:text-black;
+  }
+  .greenhead {
+    @apply rounded-[7px] bg-green px-[7px] text-black;
+  }
+  .whitehead {
+    @apply rounded-[7px] bg-white px-[7px] text-black;
+  }
+}
+
+.custom-grid {
+  grid-template: auto auto;
+}
